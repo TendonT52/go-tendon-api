@@ -1,0 +1,24 @@
+app:
+  name: tendonAPI
+  env: development
+  port: 8080
+  log: true
+mongo:
+  name: tendon
+  connection: mongodb://admin:password@localhost:27017
+  collection:
+    account:
+      name: account
+      addUserTimeOut: 500ms
+      getUserTimeOut: 500ms
+      deleteUserTimeOut: 500ms
+    jwt:
+      name: jwt
+      jwtAccessSecret: 7D6E76C43F021954C475152AB585D723162F58F5F3818DCF059D17B68F8B204B
+      jwtRefreshSecret: 36EAB3EB9D44FC17197427323446029B45C676495F64E66D311F99451425FAF5
+      addRefreshTokenTimeOut: 500ms
+      getRefreshTokenTimeOut: 500ms
+      deleteRefreshTokenTimeOut: 500ms
+token:
+  accessTokenExpire: 300s
+  refreshTokenExpire: 120h
